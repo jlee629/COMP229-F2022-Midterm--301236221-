@@ -41,13 +41,13 @@ router.post("/add", (req, res, next) => {
       res.end(err);
     } else {
       //refresh the faculty-list
-      res.redirect("faculties/index");
+      res.redirect("/faculties");
     }
   });
 });
 
 // GET the faculty  Details page in order to edit an existing faculty
-router.get("details/:id", (req, res, next) => {
+router.get("/details/:id", (req, res, next) => {
   let id = req.params.id; //id of actual object
 
   faculty.findById(id, (err, facultytoedit) => {
@@ -62,7 +62,7 @@ router.get("details/:id", (req, res, next) => {
 });
 
 // POST - process the information passed from the details form and update the document
-router.post("/:id", (req, res, next) => {
+router.post("/details/:id", (req, res, next) => {
   let id = req.params.id; //id of actual object
 
   let updatefaculty = faculty({
@@ -78,21 +78,21 @@ router.post("/:id", (req, res, next) => {
       res.end(err);
     } else {
       //refresh the book list
-      res.redirect("faculties/index");
+      res.redirect("/faculties");
     }
   });
 });
 
 // GET - process the delete
-router.get("/delete", (req, res, next) => {
-  let id = req.params.id;
-  faculty.remove({ _id: id }, (err) => {
+router.get("/delete/:Facultyname", (req, res, next) => {
+  let Facultyname = req.params.Facultyname;
+  faculty.remove({ Facultyname: Facultyname }, (err) => {
     if (err) {
       console.log(err);
       res.end(err);
     } else {
       //refresh book list
-      res.redirect("faculties/index");
+      res.redirect("/faculties");
     }
   });
 });
