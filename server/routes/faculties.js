@@ -1,3 +1,5 @@
+/* faculties.js, Jungyu Lee, 301236221, Faculty Information */ 
+
 // modules required for routing
 let express = require("express");
 let router = express.Router();
@@ -83,7 +85,7 @@ router.post("/details/:id", (req, res, next) => {
   });
 });
 
-// GET - process the delete
+// GET - process the delete, use Facultyname
 router.get("/delete/:Facultyname", (req, res, next) => {
   let Facultyname = req.params.Facultyname;
   faculty.remove({ Facultyname: Facultyname }, (err) => {

@@ -21,6 +21,8 @@ mongoDB.once("open", () => {
   console.log("Database Connected!..");
 });
 
+/* app.js, Jungyu Lee, 301236221, Faculty Information */ 
+
 // define routers
 let index = require("../routes/index"); // top level routes
 let faculties = require("../routes/faculties"); // routes for faculties

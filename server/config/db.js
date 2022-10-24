@@ -1,3 +1,5 @@
+/* db.js, Jungyu Lee, 301236221, Faculty Information */ 
+
 module.exports = {
   //local MongoDB deployment ->
   //URI: "mongodb://127.0.0.1/faculty_info",

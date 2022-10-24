@@ -1,5 +1,7 @@
 /* custom JS goes here */
 
+/* app.js, Jungyu Lee, 301236221, Faculty Information */ 
+
 /* pagination code from http://www.bootply.com/lxa0FF9yhw */
 $.fn.pageMe = function(opts){
     var $this = this,

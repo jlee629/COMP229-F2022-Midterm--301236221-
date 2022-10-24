@@ -1,3 +1,4 @@
+/* faculties.js, Jungyu Lee, 301236221, Faculty Information */ 
 let mongoose = require("mongoose");
 
 // create a model class
